@@ -1,0 +1,29 @@
+<header class="bg-[#0b141c] text-[#DAE3EE] font-headline">
+    <div class="flex flex-col">
+        <div #topBar class="flex justify-between items-center p-4 border-b border-[#424754] md:px-8 lg:px-12">
+            <a routerLink="/" class="font-bold text-2xl" (click)="closeMenu()">Andy Chavez</a>
+
+            <button
+                type="button"
+                class="md:hidden"
+                (click)="toggleMenu()"
+                aria-label="Abrir menú"
+                [attr.aria-expanded]="isMenuOpen()"
+                aria-controls="main-nav">
+                <app-icon name="menu" [size]="24"/>
+            </button>
+
+            <nav
+                id="main-nav"
+                [class]="navClasses()"
+                [style.top]="!isMenuOpen() ? null : navTop()"
+                [style.height]="!isMenuOpen() ? null : navHeight()">
+                <a class="nav-item active" (click)="closeMenu()">Inicio</a>
+                <a class="nav-item" (click)="closeMenu()">Sobre mí</a>
+                <a class="nav-item" (click)="closeMenu()">Hoja de ruta</a>
+                <a class="nav-item" (click)="closeMenu()">Proyectos</a>
+                <a class="nav-item" (click)="closeMenu()">Contacto</a>
+            </nav>
+        </div>
+    </div>
+</header>

@@ -1,3 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@import '@fontsource/inter';
+@import '@fontsource/geist';
+
+@theme {
+    --color-primary: #3b82f6;
+    --color-secondary: #06B6D4;
+    --color-tertiary: #F0F6FC;
+    --color-neutral: #8B949E;
+
+    --font-headline: "Geist", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-label: "Geist", sans-serif;
+}
+
+.nav-item {
+    @apply font-semibold text-[32px] text-[#C2C6D6] md:text-[14px] md:font-medium;
+}
+
+.nav-item.active {
+    @apply md:border-b-2 md:text-[#adc6ff];
+}
