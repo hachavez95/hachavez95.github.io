@@ -5,7 +5,7 @@ import {Icon} from '../../shared/ui/icon/icon';
 @Component({
     selector: 'app-navbar',
     standalone: true,
-    imports: [RouterLink, RouterLinkActive, Icon],
+    imports: [RouterLink, Icon],
     templateUrl: './navbar.html',
     styleUrl: './navbar.css',
 })
