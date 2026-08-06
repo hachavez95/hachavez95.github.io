@@ -1,4 +1,4 @@
-<header class="bg-[#0b141c] text-[#DAE3EE] font-headline">
+<header class="sticky top-0 bg-[#0b141c] text-[#DAE3EE] font-headline">
     <div #topBar class="border-b border-[#424754]">
         <div class="p-4 flex justify-between items-center md:px-8 xl:px-12 xl:max-w-384 xl:mx-auto">
             <a routerLink="/" class="font-bold text-2xl" (click)="closeMenu()">Andy Chavez</a>
@@ -9,15 +9,17 @@
                 (click)="toggleMenu()"
                 aria-label="Abrir menú"
                 [attr.aria-expanded]="isMenuOpen()"
-                aria-controls="main-nav">
-                <app-icon name="menu" color="text-[#DAE3EE]" size="size-8"/>
+                aria-controls="main-nav"
+            >
+                <app-icon name="menu" color="text-[#DAE3EE]" size="size-8" />
             </button>
 
             <nav
                 id="main-nav"
                 [class]="navClasses()"
                 [style.top]="!isMenuOpen() ? null : navTop()"
-                [style.height]="!isMenuOpen() ? null : navHeight()">
+                [style.height]="!isMenuOpen() ? null : navHeight()"
+            >
                 <a class="nav-item active" (click)="closeMenu()">Inicio</a>
                 <a class="nav-item" (click)="closeMenu()">Sobre mí</a>
                 <a class="nav-item" (click)="closeMenu()">Hoja de ruta</a>
