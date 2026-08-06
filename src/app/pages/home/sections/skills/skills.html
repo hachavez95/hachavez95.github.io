@@ -1,0 +1,23 @@
+<section id="skills" class="bg-[#0b141c] py-12">
+    <div class="px-4 md:px-8 xl:px-12 xl:max-w-384 xl:mx-auto">
+        <h2
+            class="font-headline text-[32px] text-[#DAE3EE] font-semibold text-center mb-4 leading-8"
+        >
+            Kit de herramientas técnicas
+        </h2>
+
+        <span class="font-body font-regular text-[#C2C6D6] text-center block">
+            Tecnologías clave que utilizo para dar vida a las ideas.
+        </span>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            @for (skill of skills; track skill.title) {
+                <app-skill-card 
+                    [icon]="skill.icon" 
+                    [title]="skill.title" 
+                    [description]="skill.description" 
+                />
+            }
+        </div>
+    </div>
+</section>
